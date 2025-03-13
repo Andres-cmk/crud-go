@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title> Crear cliente </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/8234d7916b.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card-body">
+        <form method="POST" action="/insert">
+
+
+            <div class="form-group">
+                <label for="id">id:</label>
+                <input type="text"
+                       class="form-control" name="id" id="id" aria-describedby="helpId0" placeholder="">
+                <small id="helpId0" class="form-text text-muted">Help text</small>
+            </div>
+
+            <div class="form-group">
+                <label for="dni">DNI:</label>
+                <input type="text"
+                       class="form-control" name="dni" id="dni" aria-describedby="helpId">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text"
+                       class="form-control" name="nombre" id="nombre" aria-describedby="helpId1">
+                <small id="helpId1" class="form-text text-muted">Help text</small>
+            </div>
+
+
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text"
+                       class="form-control" name="apellido" id="apellido" aria-describedby="helpId2">
+                <small id="helpId2" class="form-text text-muted">Help text</small>
+            </div>
+
+            <div class="form-group">
+                <label for="numero">Numero de Contacto:</label>
+                <input type="text"
+                       class="form-control" name="numero" id="numero" aria-describedby="helpId3">
+                <small id="helpId3" class="form-text text-muted">Help text</small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">email:</label>
+                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelpId">
+                <small id="emailHelpId" class="form-text text-muted">Help text</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Crear Cliente</button>
+            <a class="btn btn-primary" href="/" role="button">  <i class="fa fa-arrow-left" aria-hidden="true"></i>  Regresar </a>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>

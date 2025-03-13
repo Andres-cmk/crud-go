@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Listado de Clientes Aerolinea</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/8234d7916b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand navbar-light bg-light">
+    <div class="nav navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#">Home</a>
+    </div>
+</nav>
+
+<div class="container">
+    <a class="btn btn-primary" href="/crear" role="button">Crear un nuevo cliente <i class="fa fa-cog" aria-hidden="true"></i> </a>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>DNI</th>
+            <th>NOMBRE</th>
+            <th>APELLIDO</th>
+            <th>NUMERO DE CONTACTO</th>
+            <th>CORREO</th>
+            <th>ACCIONES</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{ range. }}
+        <tr>
+            <td>{{.Id}}</td>
+            <td>{{.Dni}}</td>
+            <td>{{.Nombre}}</td>
+            <td>{{.Apellido}}</td>
+            <td>{{.NumeroContacto}}</td>
+            <th>{{.Correo}}</th>
+            <th>
+                <a name="" id="" class="btn btn-danger" href="/borrar?id={{.Id}}" role="button">Borrar</a>
+                | Editar {{.Id}} </th>
+        </tr>
+        {{end}}
+        </tbody>
+    </table>
+
+</div>
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+        <p>&copy; 2025 Mi Empresa | Todos los derechos reservados</p>
+        <a href="#" class="text-white">Términos y Condiciones</a> |
+        <a href="#" class="text-white">Política de Privacidad</a>
+    </div>
+</footer>
+
+
+</body>
+</html>
