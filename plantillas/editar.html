@@ -1,10 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <title>Editar</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-$END$
+<div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card-body">
+        <form method="POST" action="/actualizar">
+
+            <div class="form-group" hidden="hidden">
+                <label for="id">id:</label>
+                <input type="text"
+                       class="form-control" name="id" value="{{.Id}}" id="id" aria-describedby="helpId0" placeholder="">
+                <small id="helpId0" class="form-text text-muted">Help text</small>
+            </div>
+
+            <div class="form-group">
+                <label for="dni">DNI:</label>
+                <input type="text"
+                       class="form-control" name="dni" value="{{.Dni}}" id="dni" aria-describedby="helpId">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text"
+                       class="form-control" name="nombre" value="{{.Nombre}}" id="nombre" aria-describedby="helpId1">
+                <small id="helpId1" class="form-text text-muted">Help text</small>
+            </div>
+
+
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text"
+                       class="form-control" name="apellido" value="{{.Apellido}}" id="apellido" aria-describedby="helpId2">
+                <small id="helpId2" class="form-text text-muted">Help text</small>
+            </div>
+
+            <div class="form-group">
+                <label for="numero">Numero de Contacto:</label>
+                <input type="text"
+                       class="form-control" name="numero" id="numero" value="{{.NumeroContacto}}" aria-describedby="helpId3">
+                <small id="helpId3" class="form-text text-muted">Help text</small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">email:</label>
+                <input type="email" class="form-control" name="email" id="email" value="{{.Correo}}" aria-describedby="emailHelpId">
+                <small id="emailHelpId" class="form-text text-muted">Help text</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Actualizar Cliente</button>
+            <a class="btn btn-primary" href="/" role="button"> <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Regresar </a>
+
+        </form>
+    </div>
+</div>
 </body>
 </html>
